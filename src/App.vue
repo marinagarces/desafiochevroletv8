@@ -30,7 +30,9 @@
         </div>
     </nav>
     <!-- ROUTER VIEW QUE CARGARÁ LAS VISTAS (INICIO, SOBRE MÍ, CONTACTO, ETC.) -->
-    <router-view></router-view>
+    <transition name="mianimacion">
+        <router-view></router-view>
+    </transition>
   </div>
 
 </template>
@@ -53,5 +55,12 @@ export default {
 }
 #menu-v8 a{
   text-shadow: 1px 1px #000;
+}
+.mianimacion-enter-active, .mianimacion-leave-active{
+  transition: opacity 5s , padding 1s;
+}
+.mianimacion-enter, .mianimacion-leave-to{
+opacity: 0;
+padding: 10px;
 }
 </style>

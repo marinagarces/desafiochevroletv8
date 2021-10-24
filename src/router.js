@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Portada from './components/Portada.vue'
-import Sobremi from './components/Sobremi.vue'
-import Contacto from './components/Contacto.vue'
-import Post from './components/Post.vue'
+const Portada = ()=> Promise.resolve(import('./components/Portada.vue'))
+const Sobremi = ()=> Promise.resolve(import('./components/Sobremi.vue'))
+const Contacto = ()=> Promise.resolve(import('./components/Contacto.vue'))
+const Post = ()=> Promise.resolve(import('./components/Post.vue'))
 import Articulo from './components/Articulo.vue'
 import NotFound from './components/NotFound.vue'
 
